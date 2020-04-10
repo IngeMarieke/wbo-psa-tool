@@ -45,6 +45,7 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 		python main.py
 	- Het programma vraagt vervolgens om uw spreadsheet, in het geval van hetzelfde voorbeeld, typt u bij deze stap dus:
 		PSA_2020.xlsx
+		
 		Let op: dit werkt alleen wanneer de spreadsheet zich in de map "WBO_PSA_visualisatie_tool" bevindt.
 	
 	Het programma vraagt na deze stap om nog een paar input-parameters, deze spreken in principe voor zich
