@@ -12,28 +12,38 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 	- Open prompt/terminal:
 	
 		Voor Windows gebruikers: open de Anaconda prompt
+		
 		Voor Mac/ Linux gebruikers: open de Terminal
 	- Navigeer volgens vanuit de prompt of terminal, naar de map "WBO_PSA_visualisatie_tool"
 	- Vanuit deze map, type de volgende command:
+		
 		conda env create -f environment.yml
+	
 	Als het goed is heeft u nu een virtuele omgeving en bent u nu klaar om de tool te gebruiken!
 
 
 3) De virtuele omgeving activeren (bij ieder gebruik)
 	- Zorg dat u vanuit de Anaconda prompt of de Terminal in de map "WBO_PSA_visualisatie_tool" bent
 	- type de volgende command:
+		
 		conda activate wbo_psa_omgeving
 
 
 4) Het programma testen (optioneel)
 	Als u de vorige stappen zonder problemen heeft doorlopen, kunnen we testen of de tool naar behoren functioneert. Dit kunt u doen door de volgende stappen te doorlopen:
 	- Het programma opstarten
+		
 		Dit doet u door de volgende command te typen:
+		
 		python main.py
 	- Vervolgens vraagt de tool om een spreadsheet. 
-		Om PSA te testen typt u hier het volgende:
+	
+		- Om PSA te testen typt u hier het volgende:
+		
 		test/psa.xlsx
-		Om WBO te testen, typt u hier het volgende:
+		
+		- Om WBO te testen, typt u hier het volgende:
+		
 		test/wbo.xlsx
 	
 	De vervolgstappen spreken voor zich
