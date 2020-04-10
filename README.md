@@ -23,8 +23,8 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 
 
 3) De virtuele omgeving activeren (bij ieder gebruik)
-	- Zorg dat u vanuit de Anaconda prompt of de Terminal in de map "WBO_PSA_visualisatie_tool" bent
-	- type de volgende command:
+	- Zorg dat u vanuit de Anaconda prompt of de Terminal in de map "WBO_PSA_visualisatie_tool" bent.
+	- Type de volgende command:
 		
 			conda activate wbo_psa_omgeving
 
