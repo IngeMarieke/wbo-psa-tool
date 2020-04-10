@@ -55,10 +55,10 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 		Uw data moet een excel spreadsheet zijn, met een .xlsx-extensie, bijvoorbeeld: PSA_2020.xlsx. Kopieer of verplaats uw spreadsheet naar de genoemde map.
 	- Start het programma op door het volgende te typen: 
 		
-		python main.py
+			python main.py
 	- Het programma vraagt vervolgens om uw spreadsheet, in het geval van hetzelfde voorbeeld, typt u bij deze stap dus:
 		
-		PSA_2020.xlsx
+			PSA_2020.xlsx
 		
 		Let op: dit werkt alleen wanneer de spreadsheet zich in de map "WBO_PSA_visualisatie_tool" bevindt.
 	
