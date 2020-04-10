@@ -17,7 +17,7 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 	- Navigeer volgens vanuit de prompt of terminal, naar de map "WBO_PSA_visualisatie_tool"
 	- Vanuit deze map, type de volgende command:
 		
-		conda env create -f environment.yml
+			conda env create -f environment.yml
 	
 	Als het goed is heeft u nu een virtuele omgeving en bent u nu klaar om de tool te gebruiken!
 
@@ -26,7 +26,7 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 	- Zorg dat u vanuit de Anaconda prompt of de Terminal in de map "WBO_PSA_visualisatie_tool" bent
 	- type de volgende command:
 		
-		conda activate wbo_psa_omgeving
+			conda activate wbo_psa_omgeving
 
 
 4) Het programma testen (optioneel)
