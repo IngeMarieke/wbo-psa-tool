@@ -40,17 +40,22 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 
 5) Uw eigen data (enquete-reacties) verwerken
 	- Zorg dat uw data zich in de map "WBO_PSA_visualisatie_tool" bevindt. 
+		
 		Uw data moet een excel spreadsheet zijn, met een .xlsx-extensie, bijvoorbeeld: PSA_2020.xlsx. Kopieer of verplaats uw spreadsheet naar de genoemde map.
 	- Start het programma op door het volgende te typen: 
+		
 		python main.py
 	- Het programma vraagt vervolgens om uw spreadsheet, in het geval van hetzelfde voorbeeld, typt u bij deze stap dus:
+		
 		PSA_2020.xlsx
 		
 		Let op: dit werkt alleen wanneer de spreadsheet zich in de map "WBO_PSA_visualisatie_tool" bevindt.
 	
 	Het programma vraagt na deze stap om nog een paar input-parameters, deze spreken in principe voor zich
 	- Uw visualisaties bekijken
+		
 		Uw visualisaties verschijnen als .png bestanden in de map "PSA_plots" of in de map "WBO_plots" afhankelijk voor welk van de twee u heeft gekozen
 	- De data bij de plots bekijken
+		
 		De data die geplot is in de .png bestanden kunt u terugvinden in een spreadsheet in de map "PSA_plots_data" of "WBO_plots_data" afhankelijk voor welk van de twee u gekozen heeft.
 
