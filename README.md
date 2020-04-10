@@ -40,11 +40,11 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 	
 		- Om PSA te testen typt u hier het volgende:
 		
-			test/psa.xlsx
+				test/psa.xlsx
 		
 		- Om WBO te testen, typt u hier het volgende:
 		
-			test/wbo.xlsx
+				test/wbo.xlsx
 	
 	De vervolgstappen spreken voor zich.
 
