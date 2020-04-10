@@ -60,7 +60,7 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 		
 			PSA_2020.xlsx
 		
-		Let op: dit werkt alleen wanneer de spreadsheet (in het geval van het voorbeeld PSA_2020.xlsx) zich in de map "WBO_PSA_visualisatie_tool" bevindt.
+		Let op: dit werkt alleen wanneer de spreadsheet (in het geval van het voorbeeld: PSA_2020.xlsx) zich in de map "WBO_PSA_visualisatie_tool" bevindt.
 	
 	Het programma vraagt na deze stap om nog een paar input-parameters, deze spreken in principe voor zich.
 	- Uw visualisaties bekijken.
