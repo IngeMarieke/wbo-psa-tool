@@ -10,6 +10,7 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 	
 2) Het creëren van een virtuele omgeving met Miniconda/ Anaconda (alleen bij eerste gebruik)
 	- Open prompt/terminal:
+	
 		Voor Windows gebruikers: open de Anaconda prompt
 		Voor Mac/ Linux gebruikers: open de Terminal
 	- Navigeer volgens vanuit de prompt of terminal, naar de map "WBO_PSA_visualisatie_tool"
