@@ -3,9 +3,10 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 
 
 1) Installeren van Miniconda (alleen bij eerste gebruik, in de afwezigheid van een versie van Anaconda of Miniconda op uw computer).
-	- Installeren in een Windows omgeving: https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html
-	- Installeren in een Mac omgeving: https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html
-	- Installeren in een Linux omgeving: https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
+	Om gebruik te kunnen maken van deze tool is een distributie van Anaconda nodig. Zowel Anaconda als Miniconda zijn goede opties. In dit geval richten wij op het gebruik van Miniconda.
+	- Installeren van Miniconda in een Windows omgeving: https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html
+	- Installeren van Miniconda in een Mac omgeving: https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html
+	- Installeren van Miniconda in een Linux omgeving: https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
 	
 	
 2) Het creëren van een virtuele omgeving met Miniconda/ Anaconda (alleen bij eerste gebruik).
@@ -15,18 +16,44 @@ Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende
 		
 		- Voor Mac/ Linux gebruikers: open de Terminal.
 	- Navigeer volgens vanuit de prompt of terminal, naar de map "WBO_PSA_visualisatie_tool".
-	- Vanuit deze map, type de volgende command:
+		- In het geval van een Windows-omgeving typt u eerst 'cd' met daarachter het pad naar (de locatie van) de map, bijvoorbeeld: 
+			
+				cd C:\Users\WBO_PSA_visualisatie_tool\
+		- In het geval van een Mac/Linux-omgeving typt u ook eerst 'cd' met daarachter de locatie van de map, dit zal er ongeveer zo uit moeten zien:
+				
+				cd ~/Documents/WBO_PSA_visualisatie_tool
+
+	- Vanuit deze map, type de volgende command om een omgeving te creëren:
 		
-			conda env create -f environment.yml
+			conda create --name wbo_psa_env
+	- Vervolgens moet u in de virtuele omgeving komen, dit doet u door het volgende te typen:
+		- Windows:
+				
+				activate wbo_psa_env
+		
+		- Mac/Linux:
+				
+				source activate wbo_psa_env
+				
+	- Nu moeten er pakketten geïnstalleerd worden, die nodig zijn om het programma te kunnen installeren, hiervoor moet u het volgende command typen:
 	
-	Als het goed is heeft u nu een virtuele omgeving en bent u nu klaar om de tool te gebruiken!
+			conda install pandas matplotlib xlrd openpyxl
+	
+	Als het goed is heeft u nu een virtuele omgeving en bent u nu klaar om de tool te gebruiken! 
+	
+	U kunt stap 3 overslaan omdat u al in de juiste map, in de juiste virtuele omgeving, bent.
 
 
 3) De virtuele omgeving activeren (bij ieder gebruik).
 	- Zorg dat u vanuit de Anaconda prompt of de Terminal in de map "WBO_PSA_visualisatie_tool" bent.
 	- Type de volgende command:
+		- Windows:
+				
+				activate wbo_psa_env
 		
-			conda activate wbo_psa_omgeving
+		- Mac/Linux:
+				
+				source activate wbo_psa_env
 
 
 4) Het programma testen (optioneel).
