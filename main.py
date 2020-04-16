@@ -91,9 +91,17 @@ class PSA_WBO:
 
     @staticmethod
     def get_figures(data, figuresize, colormap, outputname):
+        def add_text(df):
+
+            for n in df:
+                for i, (cs, ab, pc) in enumerate(zip(df.iloc[:, :].cumsum(1)[n], df[n], df[n])):
+                    if int(pc) != 0:
+                        plt.text(cs - ab / 2, i, str(np.round(pc, 1)) + '%', va='center', ha='center', weight='bold', size='small', stretch='ultra-condensed')
+            return
         data.plot(kind='barh', stacked=True, figsize=figuresize, colormap=colormap)
         plt.legend(bbox_to_anchor=(0, 1.02, 1, 0.2), loc="lower left", mode="expand", borderaxespad=0, ncol=3,
                    fontsize=15)
+        add_text(data)
         fig1 = plt.gcf()
         fig1.tight_layout()
         fig1.savefig(outputname)
