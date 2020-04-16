@@ -1,6 +1,6 @@
 # wbo-psa-tool
 Om gebruik te maken van deze WBO- & PSA-visualisatie tool, is zult u de volgende stappen moeten doorlopen:
-
+0) Download deze repository 
 
 1) Installeren van Miniconda (alleen bij eerste gebruik, in de afwezigheid van een versie van Anaconda of Miniconda op uw computer).
 	Om gebruik te kunnen maken van deze tool is een distributie van Anaconda nodig. Zowel Anaconda als Miniconda zijn goede opties. In dit geval richten wij op het gebruik van Miniconda.
