@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
 from matplotlib.colors import ListedColormap
-import numpy as np
 
 
 class PSA_WBO:
@@ -99,7 +98,7 @@ class PSA_WBO:
             for n in df:
                 for i, (cs, ab, pc) in enumerate(zip(df.iloc[:, :].cumsum(1)[n], df[n], df[n])):
                     if int(pc) != 0:
-                        plt.text(cs - ab / 2, i, str(np.round(pc, 1)) + '%', va='center', ha='center', weight='bold',
+                        plt.text(cs - ab / 2, i, str(round(pc, 1)) + '%', va='center', ha='center', weight='bold',
                                  size='small', stretch='ultra-condensed')
             return
 
