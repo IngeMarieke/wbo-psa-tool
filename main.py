@@ -2,6 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
 from matplotlib.colors import ListedColormap
+import numpy as np
+
 
 class PSA_WBO:
     def __init__(self, sheet, cat):
@@ -37,7 +39,8 @@ class PSA_WBO:
 
     def get_PSA_plots(self, year, func):
         # antwoordopties
-        o_a = ['Zeer oneens', 'Oneens', 'Neutraal', 'Eens', 'Zeer eens', 'Geen mening']  # als input antwoordmogelijkheden
+        o_a = ['Zeer oneens', 'Oneens', 'Neutraal', 'Eens', 'Zeer eens',
+               'Geen mening']  # als input antwoordmogelijkheden
         o_b = ['Ja', 'Nee', 'Weet niet']
         o_c = ['Nee, ik zou graag meer uren willen werken', 'Nee, ik zou graag minder uren willen werken',
                'Ja, ik ben tevreden over het aantal uren dat ik werk', 'Geen mening']
@@ -96,8 +99,10 @@ class PSA_WBO:
             for n in df:
                 for i, (cs, ab, pc) in enumerate(zip(df.iloc[:, :].cumsum(1)[n], df[n], df[n])):
                     if int(pc) != 0:
-                        plt.text(cs - ab / 2, i, str(np.round(pc, 1)) + '%', va='center', ha='center', weight='bold', size='small', stretch='ultra-condensed')
+                        plt.text(cs - ab / 2, i, str(np.round(pc, 1)) + '%', va='center', ha='center', weight='bold',
+                                 size='small', stretch='ultra-condensed')
             return
+
         data.plot(kind='barh', stacked=True, figsize=figuresize, colormap=colormap)
         plt.legend(bbox_to_anchor=(0, 1.02, 1, 0.2), loc="lower left", mode="expand", borderaxespad=0, ncol=3,
                    fontsize=15)
@@ -149,7 +154,7 @@ class PSA_WBO:
 
         functiekeuze, antwoordmogelijkheden, functiegroepen = open_functiegroepen()
         category = input(f"\nVan welke functiegroep wilt u de {psa_wbo}-resultaten van {jaar} hebben?\n"
-                         f"Type 'alle' voor de resultaten van alle functiegroepen\n"+functiekeuze)
+                         f"Type 'alle' voor de resultaten van alle functiegroepen\n" + functiekeuze)
         if category.isnumeric():
             if int(category) in antwoordmogelijkheden:
                 return functiegroepen[int(category)]
@@ -163,24 +168,15 @@ class PSA_WBO:
 if __name__ == "__main__":
     print('\nWBO/PSA VISUALISATIE TOOL\n'
           'April 2020 \nontwikkeld door Ingmar Visser in opdracht van Jelle Visser\n\n'
-          'Deze tool is ontwikkeld om de data van PSA en WBO enquetes te verwerken en te visualiseren. Na het \n'
-          'doorlopen van de stappen kunt u de PSA visualisaties in de map "PSA_plots" vinden en de WBO visualisaties \n'
-          'in de map "WBO_plots. Ook de verwerkte data wordt opgeslagen, deze kunt u terugvinden in de mappen \n'
-          '"PSA_plots_data" en WBO_plots_data".\n')
+          'Deze tool is ontwikkeld om de data van PSA en WBO enquêtes te verwerken en te visualiseren. Na het \n'
+          'doorlopen van de stappen bevinden de PSA visualisaties zich in de map "PSA_plots" en de WBO visualisaties \n'
+          'in de map "WBO_plots. Ook de verwerkte data wordt opgeslagen, deze excel-bestanden bevinden zich in de \n'
+          'mappen "PSA_plots_data" en "WBO_plots_data".\n')
+    
     sheet = PSA_WBO.open_sheet()
     psa_wbo = PSA_WBO.psa_or_wbo()
     jaar = input('\nVan welk jaar?\n')
     functiegroep = PSA_WBO.get_functiegroep()
-
-    # sheet = 'test/EXCEL WBO.xlsx'
-    # psa_wbo = 'WBO'
-    # jaar = '2020'
-    # functiegroep = 0
-    #
-    # sheet = 'test/PILOT PSA.xlsx'
-    # psa_wbo = 'PSA'
-    # jaar = '2020'
-    # functiegroep = 0
 
     cls = PSA_WBO(sheet, functiegroep)
     if psa_wbo.upper() == 'PSA':
